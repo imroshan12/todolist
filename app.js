@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+// const ejs = require('ejs');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +18,8 @@ app.get("/", (req, res) => {
 app.post("/", (req, res)=>{
   var listItem = req.body.todo;
   items.push(listItem);
+  // for(var i = 0; i < items.length; i++)
+  // console.log(items[i] + " ");
   res.redirect("/");
   // res.send("Successfully submitted");
 })

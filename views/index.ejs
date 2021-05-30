@@ -17,10 +17,9 @@
     <ul>
       <li>Breakfast</li>
       <li>To Code</li>
-      <%for(var i = 0; i < listItems.length; i++)%>
-      <%{%>
-          <li><% listItems[i] %></li>
-      <%}%>
+      <% for(var i = 0; i < listItems.length; i++){ %>
+          <li><%= listItems[i] %></li>
+      <% } %>
     </ul>
 
     <form action="/" method="post">
